@@ -1,6 +1,6 @@
 {
   "name": "@skill-evolve/meta-skill",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "type": "module",
   "description": "SkillEvolve meta-skill for Claude Code - connect your agent to collective craft knowledge",
   "author": "Skill-Evolve",
