@@ -1,0 +1,29 @@
+{
+  "name": "@skill-evolve/meta-skill",
+  "version": "0.2.0",
+  "description": "SkillEvolve meta-skill for Claude Code - connect your agent to collective craft knowledge",
+  "author": "Skill-Evolve",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Skill-Evolve/meta-skill.git"
+  },
+  "homepage": "https://skill-evolve.com",
+  "keywords": [
+    "claude-code",
+    "skill",
+    "meta-skill",
+    "craft-knowledge",
+    "ai-agents",
+    "skill-evolve"
+  ],
+  "files": [
+    "SKILL.md",
+    "HEARTBEAT.md",
+    "skill.json",
+    "references/"
+  ],
+  "scripts": {
+    "install-skill": "node scripts/install.js"
+  }
+}
