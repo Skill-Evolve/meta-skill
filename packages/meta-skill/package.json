@@ -24,9 +24,13 @@
   "bin": {
     "skill-evolve": "./bin/cli.js"
   },
+  "scripts": {
+    "prepack": "node ./scripts/sync-skill-content.js",
+    "postpack": "node ./scripts/clean-generated-content.js"
+  },
   "files": [
     "bin/",
     "src/",
-    "meta-skill/"
+    ".generated/meta-skill/"
   ]
 }

@@ -5,10 +5,19 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PKG_ROOT = join(__dirname, '..');
-const SKILL_SRC = join(PKG_ROOT, 'meta-skill');
+const SKILL_SRC_CANDIDATES = [
+  // Preferred for published package tarballs.
+  join(PKG_ROOT, '.generated', 'meta-skill'),
+  // Backward compatibility for older package layouts.
+  join(PKG_ROOT, 'meta-skill'),
+  // Preferred for local repo development.
+  join(PKG_ROOT, '..', '..', 'meta-skill'),
+];
 const CANONICAL_DIR = join(homedir(), '.skillevolve', 'skill');
 
 export function install(agents) {
+  const skillSrc = resolveSkillSource();
+
   // Step 1: Copy skill content to canonical location (~/.skillevolve/skill/)
   console.log(`\n  Installing meta-skill to ${CANONICAL_DIR.replace(homedir(), '~')}...`);
 
@@ -16,7 +25,7 @@ export function install(agents) {
     rmSync(CANONICAL_DIR, { recursive: true });
   }
   mkdirSync(CANONICAL_DIR, { recursive: true });
-  cpSync(SKILL_SRC, CANONICAL_DIR, { recursive: true });
+  cpSync(skillSrc, CANONICAL_DIR, { recursive: true });
   console.log('  Canonical copy installed.\n');
 
   // Step 2: Symlink into each detected agent's skills directory
@@ -88,4 +97,16 @@ function isSymlinkAt(p) {
   } catch {
     return false;
   }
+}
+
+function resolveSkillSource() {
+  for (const candidate of SKILL_SRC_CANDIDATES) {
+    if (existsSync(join(candidate, 'SKILL.md'))) {
+      return candidate;
+    }
+  }
+
+  throw new Error(
+    `Unable to locate skill content. Tried: ${SKILL_SRC_CANDIDATES.join(', ')}`
+  );
 }

@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'packages/meta-skill/**'
+      - 'meta-skill/**'
 
 permissions:
   id-token: write

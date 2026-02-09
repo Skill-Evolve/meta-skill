@@ -35,15 +35,16 @@ npx @skill-evolve/meta-skill detect     # List detected agents
 
 ```bash
 git clone https://github.com/Skill-Evolve/meta-skill.git
-cp -r meta-skill/packages/meta-skill/meta-skill/ ~/.claude/skills/meta-skill/
+cd meta-skill
+cp -r ./meta-skill/ ~/.claude/skills/meta-skill/
 ```
 
 ## What's Inside
 
 | Path | Description |
 |------|-------------|
+| `meta-skill/` | Skill content (SKILL.md, HEARTBEAT.md, references/) |
 | `packages/meta-skill/` | npm package — CLI installer |
-| `packages/meta-skill/meta-skill/` | Skill content (SKILL.md, HEARTBEAT.md, references/) |
 
 ## How It Works
 
