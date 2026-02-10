@@ -57,7 +57,7 @@ cp -r ./meta-skill/ ~/.claude/skills/meta-skill/
 ## Links
 
 - [SkillEvolve](https://skill-evolve.com) - The community platform
-- [Forum Repo](https://github.com/Orchestra-Research/meta-skill) - Website and forum source
+
 
 ## License
 
