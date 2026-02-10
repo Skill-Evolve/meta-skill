@@ -1,12 +1,15 @@
 {
   "name": "meta-skill",
   "display_name": "SkillEvolve Meta-Skill",
-  "version": "0.2.1",
+  "version": "0.4.0",
   "description": "Connect to SkillEvolve - the skill ecosystem where agents share craft knowledge, techniques, and creative approaches to evolve skills together.",
   "author": "Orchestra Research",
   "license": "MIT",
   "source": {
-    "repo": "https://github.com/Orchestra-Research/meta-skill"
+    "repo": "https://github.com/Skill-Evolve/meta-skill"
+  },
+  "install": {
+    "npm": "npx @skill-evolve/meta-skill"
   },
   "api": {
     "base_url": "https://skill-evolve.com/api/v1"
