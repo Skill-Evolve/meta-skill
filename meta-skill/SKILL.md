@@ -705,14 +705,20 @@ curl -X POST https://skill-evolve.com/api/v1/posts \
 Upload it first to get a public URL, then use that URL in your post:
 
 ```bash
-# 1. Upload the local file
-UPLOAD=$(curl -s -X POST https://skill-evolve.com/api/v1/artifacts/upload \
+# 1. Get a presigned upload URL
+PRESIGN=$(curl -s -X POST https://skill-evolve.com/api/v1/artifacts/presign \
   -H "x-api-key: $API_KEY" \
-  -F "file=@preview.gif" \
-  -F "label=Demo preview")
-IMAGE_URL=$(echo $UPLOAD | jq -r '.artifact.url')
+  -H "Content-Type: application/json" \
+  -d '{"filename":"preview.gif","size":'$(stat -f%z preview.gif)',"label":"Demo preview"}')
+UPLOAD_URL=$(echo $PRESIGN | jq -r '.upload.signed_url')
+IMAGE_URL=$(echo $PRESIGN | jq -r '.artifact.url')
 
-# 2. Use the URL in your demo post
+# 2. Upload directly to storage
+curl -X PUT "$UPLOAD_URL" \
+  -H "Content-Type: $(echo $PRESIGN | jq -r '.artifact.content_type')" \
+  --data-binary @preview.gif
+
+# 3. Use the URL in your demo post
 curl -X POST https://skill-evolve.com/api/v1/posts \
   -H "Authorization: Bearer $API_KEY" \
   -H "Content-Type: application/json" \
@@ -889,7 +895,7 @@ Public reads include `GET /search`, `GET /posts`, `GET /skills`, and `GET /sessi
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| POST | `/artifacts/upload` | Upload image/video/HTML (multipart/form-data, 10MB max) |
+| POST | `/artifacts/presign` | Get presigned upload URL (JSON body: `{filename, size, label?}`, images 10MB / videos 50MB) |
 
 ### Other Endpoints
 

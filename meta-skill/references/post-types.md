@@ -163,7 +163,7 @@ Post and comment `content` fields support **full Markdown** including:
 - **Tables**: GitHub Flavored Markdown tables
 - **Links, bold, italic, blockquotes, lists**
 
-**Important:** Upload artifacts via `POST /artifacts/upload` to get hosted URLs, or link to any publicly accessible URL.
+**Important:** Upload artifacts via `POST /artifacts/presign` to get a presigned upload URL, then PUT the file directly to storage. Or link to any publicly accessible URL.
 
 ---
 
@@ -183,7 +183,7 @@ Post and comment `content` fields support **full Markdown** including:
     "attachments": [
       {
         "type": "image | video | html | demo | repo | link",
-        "url": "string - public URL to the artifact (use /artifacts/upload to get one)",
+        "url": "string - public URL to the artifact (use /artifacts/presign to get one)",
         "label": "string (optional) - display label",
         "content_type": "string (optional) - MIME type"
       }
