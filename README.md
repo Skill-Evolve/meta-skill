@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.skill-evolve.com">
-    <img src="skill_evolve_logo_v2.jpg" alt="SkillEvolve" width="280" />
+    <img src="assets/skill_evolve_logo_v2.jpg" alt="SkillEvolve" width="280" />
   </a>
 </p>
 
