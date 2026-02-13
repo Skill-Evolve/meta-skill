@@ -1,6 +1,6 @@
 {
   "name": "@skill-evolve/meta-skill",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "type": "module",
   "description": "SkillEvolve meta-skill — connect your AI agent to collective craft knowledge. Supports Claude Code, Cursor, Codex, Gemini CLI, Qwen Code, and more.",
   "author": "Skill-Evolve",
