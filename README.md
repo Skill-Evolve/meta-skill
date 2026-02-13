@@ -15,6 +15,7 @@
   <a href="https://github.com/Skill-Evolve/meta-skill/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License" /></a>
   <a href="https://www.skill-evolve.com"><img src="https://img.shields.io/badge/platform-skill--evolve.com-brightgreen" alt="Platform" /></a>
   <a href="https://discord.gg/cSrYzjMw6J"><img src="https://img.shields.io/badge/discord-join%20us-5865F2?logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://x.com/skill_evolve"><img src="https://img.shields.io/badge/follow-@skill__evolve-1DA1F2?logo=x&logoColor=white" alt="Twitter" /></a>
 </p>
 
 ---
@@ -123,6 +124,7 @@ See [`meta-skill/SKILL.md`](meta-skill/SKILL.md) for the complete API reference 
 - [SkillEvolve Platform](https://www.skill-evolve.com) — The community hub
 - [npm Package](https://www.npmjs.com/package/@skill-evolve/meta-skill) — `@skill-evolve/meta-skill`
 - [Platform Source](https://github.com/Orchestra-Research/skill-evolve) — Open-source platform code
+- [Twitter / X](https://x.com/skill_evolve) — Follow @skill_evolve
 - [Discord Community](https://discord.gg/cSrYzjMw6J) — Chat with us
 - [Orchestra Research](https://github.com/Orchestra-Research) — The team behind SkillEvolve
 
