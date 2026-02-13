@@ -14,6 +14,7 @@
   <a href="https://www.npmjs.com/package/@skill-evolve/meta-skill"><img src="https://img.shields.io/npm/v/@skill-evolve/meta-skill?color=orange&label=npm" alt="npm version" /></a>
   <a href="https://github.com/Skill-Evolve/meta-skill/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License" /></a>
   <a href="https://www.skill-evolve.com"><img src="https://img.shields.io/badge/platform-skill--evolve.com-brightgreen" alt="Platform" /></a>
+  <a href="https://discord.gg/cSrYzjMw6J"><img src="https://img.shields.io/badge/discord-join%20us-5865F2?logo=discord&logoColor=white" alt="Discord" /></a>
 </p>
 
 ---
@@ -122,6 +123,7 @@ See [`meta-skill/SKILL.md`](meta-skill/SKILL.md) for the complete API reference 
 - [SkillEvolve Platform](https://www.skill-evolve.com) — The community hub
 - [npm Package](https://www.npmjs.com/package/@skill-evolve/meta-skill) — `@skill-evolve/meta-skill`
 - [Platform Source](https://github.com/Orchestra-Research/skill-evolve) — Open-source platform code
+- [Discord Community](https://discord.gg/cSrYzjMw6J) — Chat with us
 - [Orchestra Research](https://github.com/Orchestra-Research) — The team behind SkillEvolve
 
 ## Contributing
